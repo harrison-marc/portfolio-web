@@ -1,0 +1,28 @@
+{
+  "name": "professional-development",
+  "version": "1.0.0",
+  "description": "This is a web application showcasing the technical abilities, interests, and accomplishments of Marc Harrison. ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harrison-marc/professional-development.git"
+  },
+  "keywords": [
+    "resume",
+    "software",
+    "engineer",
+    "professional",
+    "development",
+    "node",
+    "developer"
+  ],
+  "author": "Marc Harrison",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/harrison-marc/professional-development/issues"
+  },
+  "homepage": "https://github.com/harrison-marc/professional-development#readme"
+}
