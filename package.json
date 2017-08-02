@@ -1,6 +1,9 @@
 {
   "name": "professional-development",
   "version": "1.0.0",
+  "engines": {
+    "node": "6.10.2"
+  },
   "description": "This is a web application showcasing the technical abilities, interests, and accomplishments of Marc Harrison. ",
   "main": "index.js",
   "scripts": {
