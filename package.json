@@ -10,7 +10,8 @@
     "axios": "^0.16.2",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
-    "react-scripts": "1.0.11"
+    "react-scripts": "1.0.11",
+    "cross-env": "^5.0.5"
   },
   "scripts": {
     "start": "cross-env NODE_PATH=src react-scripts start",
@@ -38,6 +39,5 @@
   },
   "homepage": "https://github.com/harrison-marc/professional-development#readme",
   "devDependencies": {
-    "cross-env": "^5.0.5"
   }
 }
