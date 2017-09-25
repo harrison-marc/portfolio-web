@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import logo from '../logo.svg';
+import '../App.css';
+import Skill from '../components/Skill'
 
 class App extends Component {
   render() {
@@ -11,8 +12,10 @@ class App extends Component {
           <h2>Welcome to React From Marc</h2>
         </div>
         <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload Marc.
+          Current Skills
         </p>
+
+          <Skill/>
       </div>
     );
   }
