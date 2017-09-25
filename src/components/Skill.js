@@ -14,6 +14,14 @@ class Skill extends Component {
         };
     }
 
+   filterSkills(category) {
+        var filteredSkills = this.state.skills.filter(skill => skill.category = category);
+
+        return {
+            filteredSkills
+        }
+    }
+
     componentDidMount() {
         axios.get('https://marc-portfolio-service.herokuapp.com/api/skill/all')
             .then(res => {
@@ -26,14 +34,28 @@ class Skill extends Component {
     render() {
         return (
             <div>
+                <h2>Tools</h2>
                 <ul>
-                    {this.state.skills.map(skill =>
-                        <li>{skill.name}</li>
-                    )}
+                    {this.state.skills.filter(skill => skill.category === "tool").map(skill => <li id={skill.Id}>{skill.name}</li>)}
+
+                </ul>
+
+                <h2>Languages</h2>
+                <ul>
+                    {this.state.skills.filter(skill => skill.category === "language").map(skill => <li id={skill.Id}>{skill.name}</li>)}
+
+                </ul>
+
+                <h2>Frameworks</h2>
+                <ul>
+                    {this.state.skills.filter(skill => skill.category === "framework").map(skill => <li id={skill.Id}>{skill.name}</li>)}
+
                 </ul>
             </div>
         );
     }
 }
+
+
 
 export default Skill;
