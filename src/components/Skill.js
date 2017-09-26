@@ -14,21 +14,10 @@ class Skill extends Component {
         };
     }
 
-
-
-   filterSkills(category) {
-        var filteredSkills = this.state.skills.filter(skill => skill.category = category);
-
-        return {
-            filteredSkills
-        }
-    }
-
     componentDidMount() {
         axios.get('https://marc-portfolio-service.herokuapp.com/api/skill/all')
             .then(res => {
                 const skills = res.data;
-                console.log(skills)
                 this.setState({ skills });
             });
     }
