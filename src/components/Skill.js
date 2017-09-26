@@ -3,6 +3,7 @@
  */
 import React, { Component } from 'react';
 import axios from 'axios';
+import SkillList from './SkillList'
 
 class Skill extends Component {
 
@@ -23,24 +24,6 @@ class Skill extends Component {
     }
 
     render() {
-        function ListItem(props) {
-            return <li>{props.value}</li>;
-        }
-
-        function SkillList(props) {
-            const skills = props.skills;
-            const type = props.type;
-
-            const listItems = skills.filter(skill => skill.category === type).map((skill) =>
-                <ListItem key={skill.name} value={skill.name} />
-            );
-            return (
-                <ul>
-                    {listItems}
-                </ul>
-            );
-        }
-
         return (
             <div>
                 <h2>Tools</h2>
@@ -56,7 +39,5 @@ class Skill extends Component {
         );
     }
 }
-
-
 
 export default Skill;
