@@ -14,6 +14,8 @@ class Skill extends Component {
         };
     }
 
+
+
    filterSkills(category) {
         var filteredSkills = this.state.skills.filter(skill => skill.category = category);
 
@@ -32,25 +34,35 @@ class Skill extends Component {
     }
 
     render() {
+        function ListItem(props) {
+            return <li>{props.value}</li>;
+        }
+
+        function SkillList(props) {
+            const skills = props.skills;
+            const type = props.type;
+
+            const listItems = skills.filter(skill => skill.category === type).map((skill) =>
+                <ListItem key={skill.name} value={skill.name} />
+            );
+            return (
+                <ul>
+                    {listItems}
+                </ul>
+            );
+        }
+
         return (
             <div>
                 <h2>Tools</h2>
-                <ul>
-                    {this.state.skills.filter(skill => skill.category === "tool").map(skill => <li id={skill.Id}>{skill.name}</li>)}
-
-                </ul>
+                <SkillList skills={this.state.skills} type="tool"/>
 
                 <h2>Languages</h2>
-                <ul>
-                    {this.state.skills.filter(skill => skill.category === "language").map(skill => <li id={skill.Id}>{skill.name}</li>)}
-
-                </ul>
+                <SkillList skills={this.state.skills} type="language"/>
 
                 <h2>Frameworks</h2>
-                <ul>
-                    {this.state.skills.filter(skill => skill.category === "framework").map(skill => <li id={skill.Id}>{skill.name}</li>)}
+                <SkillList skills={this.state.skills} type="framework"/>
 
-                </ul>
             </div>
         );
     }
